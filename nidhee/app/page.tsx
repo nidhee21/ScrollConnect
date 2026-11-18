@@ -4,33 +4,43 @@ import Nav from "./components/navbar/Nav";
 
 function Page() {
   return (
-    <div className="p-3 flex">
+    <div className="min-h-screen flex flex-col">
       <Nav />
 
-      <div className="p-3  flex w-full h-screen">
-        <div className="p-3  w-1/2 h-screen">
-          <h1 className="text-2xl font-bold">
-            Welcome to SIGCE
-          </h1>
+      <main className="flex-1 w-full flex items-center justify-center px-6 py-10">
 
-          <p>
-            Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
-          </p>
-          <button className="p-4 bg-blue-500 text-white rounded-lg w-fit"> Join with us </button>
-        </div>
+        <div className="w-full max-w-6xl flex md:flex-row flex-col items-center justify-center gap-10">
 
-        <div className="p-3 w-1/2 h-screen">
-          <Image
-            src="/loginbro.png"
-            alt="Login illustration"
-            width={500}
-            height={300}
-            className="w-fit h-auto"
-          />
+          {/* Left Section */}
+          <div className="w-full md:w-1/2 flex flex-col items-center justify-center gap-8 text-center">
+            <h1 className="text-2xl font-bold">
+              Welcome to SIGCE
+            </h1>
+
+            <p className="max-w-md">
+              Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </p>
+
+            <button className="p-4 bg-black text-white rounded-lg w-fit">
+              Join with us
+            </button>
+          </div>
+
+          {/* Right Section */}
+          <div className="w-full md:w-1/2 flex items-center justify-center">
+            <Image
+              src="/loginbro.png"
+              alt="Login illustration"
+              width={500}
+              height={500}
+              className="w-full max-w-[500px] h-auto object-contain"
+            />
+          </div>
+
         </div>
-      </div>
+      </main>
     </div>
   );
 }

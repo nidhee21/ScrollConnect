@@ -3,7 +3,7 @@ import React from 'react'
 
 function Nav() {
   return (
-    <div className= "w-full flex flex gap -5">
+    <div className= "w-full flex flex gap-7 items-center justify-center">
         <div> Logo </div>
              <div className= "flex gap-5  ">
                <Link href="/about">About</Link>
