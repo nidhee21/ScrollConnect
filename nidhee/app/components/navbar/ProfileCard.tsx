@@ -1,5 +1,11 @@
 
-function ProfileCard({ name, role, age }) {
+interface ProfileCardProps {
+  name: string;
+  role: string;
+  age: number;
+}
+
+function ProfileCard({ name, role, age }: ProfileCardProps) {
   return (
     <div className="border border-gray-300 rounded-xl p-6 shadow-md bg-white w-64">
 

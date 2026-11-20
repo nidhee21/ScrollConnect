@@ -2,6 +2,8 @@
 import Image from "next/image";
 import Nav from "./components/navbar/Nav";
 import ProfileCard from "./components/navbar/ProfileCard";
+import StudentInfo from "./components/StudentInfo";
+import Link from 'next/link'
 
 function Page() {
   return (
@@ -16,7 +18,7 @@ function Page() {
           {/* Left Section */}
           <div className="w-full md:w-1/2 flex flex-col items-center justify-center gap-8 text-center">
             <h1 className="text-4xl font-bold">
-              Welcome to Scroll Connect
+              Welcome to ScrollConnect
             </h1>
 
             <p className="max-w-md text-2xl">
@@ -56,7 +58,21 @@ function Page() {
           </div>
         </section>
 
-      </main>
+        {/* Student Info Section */}
+        <section className="w-full py-12">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Student Info
+          </h2>
+          
+          <div className="flex flex-wrap justify-center gap-6">   
+          <StudentInfo name="Nidhee" course="Computer Science" />
+          <StudentInfo name="Riddhi" course="Design" />
+          <StudentInfo name="Gaurav" course="Mathematics" />
+          </div>
+        </section>
+
+
+            </main>
     </div>
   );
 }
